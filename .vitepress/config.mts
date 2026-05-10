@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "NBCL Documentation",
   description: "Documentation for NBCL - Rust embeddable configuration language",
+  base: '/docs',
   srcDir: 'src',
   lastUpdated: true,
   head: [['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],],
