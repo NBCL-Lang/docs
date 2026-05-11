@@ -1,4 +1,10 @@
 import { defineConfig } from 'vitepress'
+import fs from 'fs'
+import path from 'path'
+
+const nbclGrammar = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, './nbcl.tmLanguage.json'), 'utf8')
+)
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -8,6 +14,16 @@ export default defineConfig({
   srcDir: 'src',
   lastUpdated: true,
   head: [['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],],
+  markdown: {
+    async shikiSetup(highlighter) {
+      await highlighter.loadLanguage({
+        name: 'nbcl',
+        aliases: ['nbl'],
+        scopeName: nbclGrammar.scopeName, 
+        ...nbclGrammar
+      })
+    }
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -26,8 +42,9 @@ export default defineConfig({
       {
         text: "Getting Started",
         items: [
-          { text: 'Add as Dependency', link: '/getting-started/add_dependency.md' },
-          { text: 'Crate Features', link: '/getting-started/crate_features.md' },
+          { text: 'Add as Dependency', link: '/getting-started/add-dependency' },
+          { text: 'Crate Features', link: '/getting-started/crate-features' },
+          { text: 'Quick Start', link: '/getting-started/quick-start' },
         ],
       },
     ],
