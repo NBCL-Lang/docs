@@ -33,6 +33,7 @@ export default defineConfig({
     sidebar: [
       {
         text: "Introduction",
+        collapsed: false,
         items: [
           { text: 'Overview', link: '/introduction/overview' },
           { text: 'Benchmarks', link: '/introduction/benchmarks' },
@@ -41,6 +42,7 @@ export default defineConfig({
       },
       {
         text: "Getting Started",
+        collapsed: false,
         items: [
           { text: 'Add as Dependency', link: '/getting-started/add-dependency' },
           { text: 'Crate Features', link: '/getting-started/crate-features' },
