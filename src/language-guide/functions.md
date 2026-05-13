@@ -1,5 +1,7 @@
 # Functions
 
+## Definition
+
 Defining functions in NBCl is pretty similar to other languages. Here is an example:
 
 ::: code-group
@@ -29,6 +31,24 @@ fn say_hello(name: String) {  # [!code ++]
     print("Hello, " + name)
 }
 ```
+
+## Return Types
+
+NBCL has two types of return. Explicit return, and Implicit return. Returning with an explicit `return` keyword is called an explicit return. And automatically returning something is called an implicit return. If an expression or a node is found at the end of a script, then it is considered an implicit return.
+
+```nbl
+# Explicit
+fn get_pi() {
+    return 3.14159
+}
+
+# Implicit
+fn get_e() {
+    2.7182
+}
+```
+
+## Regarding Nodes
 
 Inside a function, you also have the ability to return Nodes. It looks something like this:
 
