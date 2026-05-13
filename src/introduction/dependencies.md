@@ -28,3 +28,9 @@ Additional dependencies used only when the `pretty-errors` feature is used:
 | Crate     | Description | Use Case |
 | --------- | ----------- | -------- |
 | [`ariadne`](http://crates.io/crates/ariadne) | Diagnostic tool used to generate beautiful error messages. | Used to generate beautiful errors from the standard error data. |
+
+## Features with no Dependencies
+
+- `no-module-imports`
+- `no-lib-imports`
+- `metadata`

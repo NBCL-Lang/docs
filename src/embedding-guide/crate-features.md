@@ -12,6 +12,17 @@ nbcl = { version = "x", features = ["feature1", "feature2"] }
 ```
 :::
 
+## `no-module-imports`
+
+Disable module imports.
+
+## `no-lib-imports`
+
+Disable library imports.
+
+## `metadata`
+
+Make `ResolvedNode` carry Span metadata.
 
 ## `pretty-errors`
 

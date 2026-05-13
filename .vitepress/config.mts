@@ -46,6 +46,9 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Quick Start', link: '/language-guide/quick-start' },
+          { text: 'Nodes', link: '/language-guide/nodes' },
+          { text: 'Variables', link: '/language-guide/variables' },
+          { text: 'Functions', link: '/language-guide/functions' },
         ],
       },
       {
