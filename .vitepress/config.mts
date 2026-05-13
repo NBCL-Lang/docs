@@ -50,7 +50,7 @@ export default defineConfig({
           { text: 'Variables', link: '/language-guide/variables' },
           { text: 'Functions', link: '/language-guide/functions' },
           { text: 'Imports', link: '/language-guide/imports' },
-          { text: 'Conditions', link: '/language-guide/conditions' },
+          { text: 'Conditionals', link: '/language-guide/conditionals' },
           { text: 'Loops', link: '/language-guide/loops' },
           {
             text: 'Built-ins',
