@@ -37,7 +37,8 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/introduction/overview' },
           { text: 'Benchmarks', link: '/introduction/benchmarks' },
-          { text: 'Dependencies', link: '/introduction/dependencies' }
+          { text: 'Dependencies', link: '/introduction/dependencies' },
+          { text: 'Resources', link: '/introduction/resources' }
         ],
       },
       {
