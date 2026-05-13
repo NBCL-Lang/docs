@@ -26,7 +26,9 @@ These are variables that are available locally to this module. Always use local 
 
 ### Global Variables
 
-Global variables behave exactly like local variables, but they are available globall across all modules.
+Global variables behave exactly like local variables, but when this file is imported as a module, the script that imported it can access the global variables. 
+
+For more information, see [Imports Section](imports).
 
 ```nbl
 # -- other.nbl --

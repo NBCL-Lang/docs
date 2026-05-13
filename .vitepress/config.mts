@@ -50,6 +50,18 @@ export default defineConfig({
           { text: 'Variables', link: '/language-guide/variables' },
           { text: 'Functions', link: '/language-guide/functions' },
           { text: 'Imports', link: '/language-guide/imports' },
+          { text: 'Conditions', link: '/language-guide/conditions' },
+          { text: 'Loops', link: '/language-guide/loops' },
+          {
+            text: 'Built-ins',
+            collapsed: false,
+            items: [
+              { text: 'Overview', link: '/language-guide/built-ins/overview' },
+              { text: 'Libraries', link: '/language-guide/built-ins/libraries' },
+              { text: 'Functions', link: '/language-guide/built-ins/functions' },
+              { text: 'Components', link: '/language-guide/built-ins/components' }
+            ],
+          }
         ],
       },
       {
