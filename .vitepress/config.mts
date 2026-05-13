@@ -42,12 +42,18 @@ export default defineConfig({
         ],
       },
       {
-        text: "Getting Started",
+        text: "Language Guide",
         collapsed: false,
         items: [
-          { text: 'Add as Dependency', link: '/getting-started/add-dependency' },
-          { text: 'Crate Features', link: '/getting-started/crate-features' },
-          { text: 'Quick Start', link: '/getting-started/quick-start' },
+          { text: 'Quick Start', link: '/language-guide/quick-start' },
+        ],
+      },
+      {
+        text: "Embedding Guide",
+        collapsed: false,
+        items: [
+          { text: 'Add as Dependency', link: '/embedding-guide/add-dependency' },
+          { text: 'Crate Features', link: '/embedding-guide/crate-features' },
         ],
       },
     ],
