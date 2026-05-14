@@ -70,6 +70,7 @@ export default defineConfig({
         items: [
           { text: 'Add as Dependency', link: '/embedding-guide/add-dependency' },
           { text: 'Crate Features', link: '/embedding-guide/crate-features' },
+          { text: 'Quick Start', link: '/embedding-guide/quick-start' },
         ],
       },
     ],
