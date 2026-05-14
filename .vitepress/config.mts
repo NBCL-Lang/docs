@@ -54,7 +54,7 @@ export default defineConfig({
           { text: 'Loops', link: '/language-guide/loops' },
           {
             text: 'Built-ins',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'Overview', link: '/language-guide/built-ins/overview' },
               { text: 'Libraries', link: '/language-guide/built-ins/libraries' },
