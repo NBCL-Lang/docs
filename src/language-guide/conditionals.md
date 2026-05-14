@@ -1,8 +1,10 @@
 # Conditional Statements
 
-NBCL has two types of conditional statements. The `if`/`else if`/`else` statement and the `match` statement.
+NBCL has two types of conditional statements. The `if`/`else if`/`else` statement for general conditions, and the `match` statement for comparing a value against specific patterns.
 
 ## If/else if/else
+
+`if` evaluates a condition and runs the first block that matches:
 
 ```nbl
 local x = 10
@@ -16,6 +18,8 @@ if x > 10 {
 }
 ```
 
+`else if` and `else` are both optional. You can have as many `else if` branches as you need.
+
 ## Match
 
 ```nbl
@@ -25,6 +29,42 @@ match x {
     "Foo" => print("x is 'Foo'")
     "Bar" => print("x is 'Bar'")
     "Baz" => print("x is 'Baz'")
-    
 }
 ```
+
+To catch any value not matched above, use `_` as a wildcard or an identifier to capture the value:
+
+::: code-group
+```nbl
+local x = "Baz"
+
+match x {
+    "Foo" => print("x is 'Foo'")
+    # 'other' holds the unmatched value
+    other => print("Unknown: " + other) 
+}
+```
+
+```json [output]
+"Unknown: Baz"
+```
+:::
+
+Wildcard (`_`) example:
+
+::: code-group
+
+```nbl
+local x = "Baz"
+
+match x {
+    "Foo" => print("x is 'Foo'")
+    _ => print("x didn't match any of the pattern") 
+}
+```
+
+```json [output]
+"x didn't match any of the pattern"
+```
+
+:::
