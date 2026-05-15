@@ -32,6 +32,34 @@ fn say_hello(name: String) {  # [!code ++]
 }
 ```
 
+## Special Call Feature
+
+Nbcl has a special function call feature, inspired from [rhai](https://rhai.rs), which allows functions to also behave like methods. The function automatically becomes a method of the first parameter.
+
+```nbl
+fn is(name, age) {
+    print(name + " is " + age + " years old")
+}
+```
+
+Take this function as an example. You can call it like so:
+
+```nbl
+is("Jhon", "20")
+```
+
+But this feature makes it so that this also works:
+
+```nbl
+"Jhon".is("20")
+```
+
+This feature is **not** exclusive to user defined functions only. The same behavior is present with [built-in functions](built-ins/functions.md) too. Here is an example:
+
+```nbl
+"Hello, World".print()
+```
+
 ## Return Types
 
 NBCL has two types of return. Explicit return, and Implicit return. Returning with an explicit `return` keyword is called an explicit return. And automatically returning something is called an implicit return. If an expression or a node is found at the end of a script, then it is considered an implicit return.
