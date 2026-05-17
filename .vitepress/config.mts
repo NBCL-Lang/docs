@@ -71,6 +71,15 @@ export default defineConfig({
           { text: 'Add as Dependency', link: '/embedding-guide/add-dependency' },
           { text: 'Crate Features', link: '/embedding-guide/crate-features' },
           { text: 'Quick Start', link: '/embedding-guide/quick-start' },
+          { 
+            text: 'Engine API',
+            collapsed: false,
+            items: [
+              { text: 'Execution API', link: '/embedding-guide/engine/execution-api' },
+              { text: 'Registration API', link: '/embedding-guide/engine/registration-api' },
+              { text: 'Other API', link: '/embedding-guide/engine/other-api' }
+            ]
+          }
         ],
       },
     ],
