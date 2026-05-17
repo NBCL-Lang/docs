@@ -4,6 +4,7 @@
         { "include": "#comments" },
         { "include": "#keywords" },
         { "include": "#types" },
+        { "include": "#constants" },
         { "include": "#node-invocation" },
         { "include": "#property-key" },
         { "include": "#strings" },
@@ -37,7 +38,7 @@
                 },
                 {
                     "name": "keyword.declaration.nbcl",
-                    "match": "\\b(fn|component|import|as|local|global|set|any)\\b"
+                    "match": "\\b(fn|component|import|as|let|const|set|any)\\b"
                 },
                 {
                     "name": "keyword.operator.nbcl",
@@ -47,7 +48,11 @@
         },
         "types": {
             "name": "support.type.nbcl",
-            "match": "\\b(String|Int|Float|Bool|List|Map|Any)\\b"
+            "match": "\\b(String|Int|Float|Bool|List|Map|Node|Lambda|Any)\\b"
+        },
+        "constants": {
+            "name": "constant.other.caps.nbcl",
+            "match": "\\b[A-Z][A-Z0-9_]*\\b"
         },
         "booleans": {
             "name": "constant.language.nbcl",
