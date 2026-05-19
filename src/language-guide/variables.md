@@ -2,60 +2,45 @@
 
 ## Defnitions
 
-In NBCL, there are two ways a variable can be defined. Eeither using the `local` keyword or the `global` keyword.
+In NBCL, there are two ways a variable can be defined. Eeither using the `let` keyword or the `const` keyword.
 
 ```nbl
-local foo = 1
-global bar = 2
+let foo = 1
+const bar = 2
 ```
 
-Variables can also be defined with a specific `Type`.
+### Let Variables
 
-```nbl
-local foo: Int = 1
+Let variables are variables that are mutable. Which means that its value can be changed later on using an assignment.
 
-#-
-    Do note that if you try to assign a non Integer
-    value to foo later, NBCL will throw an error.
--#
-```
+### Const Variables
 
-### Local Variables
-
-These are variables that are available locally to this module. Always use local variables unless you have to export certain variables to other modules.
-
-### Global Variables
-
-Global variables behave exactly like local variables, but when this file is imported as a module, the script that imported it can access the global variables. 
-
-For more information, see [Imports Section](imports).
-
-```nbl
-# -- other.nbl --
-global pi = 3.14
-
-# -- main.nbl --
-import "other.nbl" as other
-
-# Global can be accessed like this
-other.pi 
-```
+Const variables (or constant variables) are immutable variables. Once they are defined, their values cannot be changed.
 
 ## Assignments
 
 Variables can be reassigned using the keyword `set`.
 
 ```nbl
-local foo = 1
+let foo = 1
 
 # Change it to another value
 set foo = 2
 ```
 
+Constant variables (defined with `const` keyword) cannot be reassigned using the `set` keyword.
+
+```nbl
+const foo = 1
+
+# This will throw an error
+set foo   = 2
+```
+
 Augmented assignments are also supported with `set`:
 
 ```nbl
-local foo = 0
+let foo = 0
 
 # Add five to foo
 set foo += 5
