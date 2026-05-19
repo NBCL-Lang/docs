@@ -32,6 +32,6 @@ Additional dependencies used only when the `pretty-errors` feature is used:
 
 ## Features with no Dependencies
 
-- `no-module-imports`
-- `no-lib-imports`
+- `module-imports`
+- `lib-imports`
 - `metadata`
