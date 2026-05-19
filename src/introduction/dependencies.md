@@ -10,6 +10,7 @@ Dependencies that are used everwhere:
 | ------------- | ------------------ | -------- |
 | [`pest`](http://crates.io/crates/pest)        | A PEG-based parser generator. | Used to parse the NBCL syntax. | 
 | [`pest_derive`](http://crates.io/crates/pest_derive) | Extension crate to `pest` that adds derive features to Rust. | Used for the derive features to avoid manual implementation. |
+| [`rustc-hash`](http://crates.io/crates/rustc-hash) | A speedy, non-cryptographic hashing algorithm used by `rustc`. | Used to improve performance and speed up evaluation. |
 | [`serde`](http://crates.io/crates/serde) | Framework for converting Rust data to and from various data formats. | To support various data formats like JSON, YAML, TOML, etc. |
 
 ## `wasm` Dependencies
