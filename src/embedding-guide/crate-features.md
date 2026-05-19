@@ -12,13 +12,13 @@ nbcl = { version = "x", features = ["feature1", "feature2"] }
 ```
 :::
 
-## `no-module-imports`
+## `module-imports`
 
-Disable module imports.
+Enable module imports. (Enabled by default)
 
-## `no-lib-imports`
+## `lib-imports`
 
-Disable library imports.
+Enable library imports. (Enabled by default)
 
 ## `metadata`
 
