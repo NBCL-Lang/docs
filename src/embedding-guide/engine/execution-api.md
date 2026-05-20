@@ -79,7 +79,7 @@ let res_config = engine.evaluate_ast(source_ast).unwrap();
 pub fn evaluate_ast_for_ctx(&self, file: File) -> Result<(ResolvedTree, Context)>;
 ```
 
-Evaluates a source ast, produce side-effects, and return resolved configuration **and** evaluation context. The evaluation context is useful for [other-api/call_function](other-api/#nbclengine-call-function).
+Evaluates a source ast, produce side-effects, and return resolved configuration **and** evaluation context. The evaluation context is useful for [other-api/call_function](other-api#nbclengine-call-function).
 
 **Example:**
 
