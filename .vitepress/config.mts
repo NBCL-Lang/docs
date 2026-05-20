@@ -18,8 +18,8 @@ export default defineConfig({
     async shikiSetup(highlighter) {
       await highlighter.loadLanguage({
         name: 'nbcl',
-        aliases: ['nbl'],
-        scopeName: nbclGrammar.scopeName, 
+        aliases: ['nbcl'],
+        scopeName: nbclGrammar.scopeName,
         ...nbclGrammar
       })
     }
@@ -71,7 +71,7 @@ export default defineConfig({
           { text: 'Add as Dependency', link: '/embedding-guide/add-dependency' },
           { text: 'Crate Features', link: '/embedding-guide/crate-features' },
           { text: 'Quick Start', link: '/embedding-guide/quick-start' },
-          { 
+          {
             text: 'Engine API',
             collapsed: false,
             items: [

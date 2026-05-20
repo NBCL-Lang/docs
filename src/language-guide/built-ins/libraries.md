@@ -4,7 +4,7 @@ Nbcl comes with only one built-in library, that being the `std` lib (standard li
 
 ## `std.math`
 
-```nbl
+```nbcl
 import std.math
 ```
 
@@ -20,7 +20,7 @@ Library item providing additional math functionality past basic arithmetics.
 ::: info abs
 Get the absolute value of an integer.
 
-```nbl
+```nbcl
 math.abs(-10) # result: 10
 ```
 :::
@@ -28,7 +28,7 @@ math.abs(-10) # result: 10
 ::: info sqrt
 Get the square root of a floating number.
 
-```nbl
+```nbcl
 math.sqrt(36.0)
 ```
 :::
@@ -36,16 +36,15 @@ math.sqrt(36.0)
 ::: info pow
 Get the 'x' power of a floating number.
 
-```nbl
+```nbcl
 math.pow(3.0, 3.0) # result: 9
 ```
 :::
 
 ## `std.time`
 
-```nbl
+```nbcl
 import std.time
 ```
 
 Library item providing functions related with time.
-

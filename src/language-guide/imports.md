@@ -12,7 +12,7 @@ The syntax for importing a modules is the `import` keyword, followed by the rela
 
 **Here is an example:**
 
-```nbl
+```nbcl
 import "example.nbl" as example
 ```
 
@@ -27,13 +27,13 @@ If your directory looks something like this:
 
 And you want to import the `button.nbl` module, then you need to use the following code:
 
-```nbl
+```nbcl
 import "ui/button.nbl" as button
 ```
 
 However, this only imports the functions and the variables defined in the module. Not the components. Since components cannot be accessed under a namespace, you would need to import them like this:
 
-```nbl
+```nbcl
 # Functions and Varibles go under 'button'
 # 'StyledButton' component is then included in.
 import "ui/button.nbl" as button { StyledButton }
@@ -41,7 +41,7 @@ import "ui/button.nbl" as button { StyledButton }
 
 To import all the components in, use the `*` wildcard.
 
-```nbl
+```nbcl
 # All the components in button is included
 import "ui/button.nbl" as button { * }
 ```
@@ -52,7 +52,7 @@ The syntax for importing libraries is similar to importing the modules, but much
 
 **Here is an example:**
 
-```nbl
+```nbcl
 # Import the 'math' item 
 # from the 'std' library
 import std.math
@@ -62,7 +62,7 @@ import std.math
 
 The imported items can be used like this: 
 
-```nbl
+```nbcl
 import "my_cool_math.nbl" as cool_math
 import std.math
 

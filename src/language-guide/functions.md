@@ -5,7 +5,7 @@
 Defining functions in NBCl is pretty similar to other languages. Here is an example:
 
 ::: code-group
-```nbl
+```nbcl
 fn say_hello(name) {
     print("Hello, " + name)
 }
@@ -25,7 +25,7 @@ The `fn` keyword is used to define a function. This keyword should be followed b
 
 You can also enforce a data type to the parameters. Like so:
 
-```nbl
+```nbcl
 fn say_hello(name)            # [!code --]
 fn say_hello(name: String) {  # [!code ++]
     print("Hello, " + name)
@@ -36,7 +36,7 @@ fn say_hello(name: String) {  # [!code ++]
 
 Nbcl has a special function call feature, inspired from [rhai](https://rhai.rs), which allows functions to also behave like methods. The function automatically becomes a method of the first parameter.
 
-```nbl
+```nbcl
 fn is(name, age) {
     print(name + " is " + age + " years old")
 }
@@ -44,19 +44,19 @@ fn is(name, age) {
 
 Take this function as an example. You can call it like so:
 
-```nbl
+```nbcl
 is("Jhon", "20")
 ```
 
 But this feature makes it so that this also works:
 
-```nbl
+```nbcl
 "Jhon".is("20")
 ```
 
 This feature is **not** exclusive to user defined functions only. The same behavior is present with [built-in functions](built-ins/functions.md) too. Here is an example:
 
-```nbl
+```nbcl
 "Hello, World".print()
 ```
 
@@ -64,7 +64,7 @@ This feature is **not** exclusive to user defined functions only. The same behav
 
 NBCL has two types of return. Explicit return, and Implicit return. Returning with an explicit `return` keyword is called an explicit return. And automatically returning something is called an implicit return. If an expression or a node is found at the end of a script, then it is considered an implicit return.
 
-```nbl
+```nbcl
 # Explicit
 fn get_pi() {
     return 3.14159
@@ -82,7 +82,7 @@ Inside a function, you also have the ability to return Nodes. It looks something
 
 ::: code-group
 
-```nbl
+```nbcl
 fn give_children() {
     Object "children" {
         Object {}

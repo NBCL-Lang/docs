@@ -12,7 +12,7 @@ Ranges come in two forms: exclusive (..) and inclusive (..=):
 
 ::: code-group
 
-```nbl
+```nbcl
 # Exclusive goes from 1 to the
 # number before 5 (which is 4).
 for i in 1..5 {
@@ -30,7 +30,7 @@ for i in 1..5 {
 
 ::: code-group
 
-```nbl
+```nbcl
 # Inclusive goes from 1 to 5.
 for i in 1..=5 {
     print(i)
@@ -50,13 +50,13 @@ for i in 1..=5 {
 
 You can also iterate over a list directly, or a variable holding one:
 
-```nbl
+```nbcl
 for i in [1, 2, 3, 4] {
     print(i)
 }
 
 # You can loop in variables too
-local example = [2, 3, 5, 1]
+let example = [2, 3, 5, 1]
 for i in example {
     print(i)
 }
@@ -64,7 +64,7 @@ for i in example {
 
 To get both the index and value, destructure with (idx, value):
 
-```nbl
+```nbcl
 # idx is 0-based
 for (idx, num) in [3, 5, 1] {
     print(idx)
@@ -76,8 +76,8 @@ for (idx, num) in [3, 5, 1] {
 
 `while` repeats its body as long as the condition holds:
 
-```nbl
-local x = true
+```nbcl
+let x = true
 # Runs as long as x is true
 while x {
     print("x is true")
@@ -86,8 +86,8 @@ while x {
 
 This example shows how a `while` loop can be used to repeate its body until x is less than or equal to 10.
 
-```nbl
-local x = 0
+```nbcl
+let x = 0
 while x <= 10 {
     print(x)
     set x += 1

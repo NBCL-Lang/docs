@@ -6,8 +6,8 @@ NBCL has two types of conditional statements. The `if`/`else if`/`else` statemen
 
 `if` evaluates a condition and runs the first block that matches:
 
-```nbl
-local x = 10
+```nbcl
+let x = 10
 
 if x > 10 {
     print("x is greater than 10")
@@ -22,8 +22,8 @@ if x > 10 {
 
 ## Match
 
-```nbl
-local x = "Foo"
+```nbcl
+let x = "Foo"
 
 match x {
     "Foo" => print("x is 'Foo'")
@@ -35,8 +35,8 @@ match x {
 To catch any value not matched above, use `_` as a wildcard or an identifier to capture the value:
 
 ::: code-group
-```nbl
-local x = "Baz"
+```nbcl
+let x = "Baz"
 
 match x {
     "Foo" => print("x is 'Foo'")
@@ -54,8 +54,8 @@ Wildcard (`_`) example:
 
 ::: code-group
 
-```nbl
-local x = "Baz"
+```nbcl
+let x = "Baz"
 
 match x {
     "Foo" => print("x is 'Foo'")

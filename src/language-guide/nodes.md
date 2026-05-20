@@ -5,7 +5,7 @@ Nodes are if not, the most important component in NBCL. Not only because the ful
 ## Understanding the Node
 
 ::: code-group
-```nbl
+```nbcl
 Object "this is the id" {
     # Things that go by the
     # 'key = value' syntax is the property.
@@ -61,7 +61,7 @@ This example showcases the core design behind the node. This is all that is to t
 You can also define nodes within the language. But a key limitation is that the nodes defined in the language has to spit out a node that is pre-registered into the language. Like the `Object` node.
 
 ::: code-group
-```nbl
+```nbcl
 # 'component' is the keyword
 # used to define a new node.
 component NodeName (any: props) {
@@ -137,7 +137,7 @@ That is how you setup the signature of your node. Now let's move on to the prope
 ::: tip
 `child_count` can be defined like this which makes a specific amount of children required:
 
-```nbl
+```nbcl
 # Accepts only 1 child
 child_count = [1]
 ```
@@ -145,7 +145,7 @@ child_count = [1]
 
 **That's it!** :tada: Now just insert a predefined node like this:
 
-```nbl
+```nbcl
 component Example (any: props) {
     # Object is a predefined node
     Object {
@@ -163,7 +163,7 @@ There is also a variable called `self` injected inside the scope of the `compone
 So with it, you can do cool stuff like this:
 
 :::code-group
-```nbl
+```nbcl
 component Example (any: props) {
     # Print the values
     print(self.id)

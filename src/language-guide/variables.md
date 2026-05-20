@@ -4,7 +4,7 @@
 
 In NBCL, there are two ways a variable can be defined. Eeither using the `let` keyword or the `const` keyword.
 
-```nbl
+```nbcl
 let foo = 1
 const bar = 2
 ```
@@ -21,7 +21,7 @@ Const variables (or constant variables) are immutable variables. Once they are d
 
 Variables can be reassigned using the keyword `set`.
 
-```nbl
+```nbcl
 let foo = 1
 
 # Change it to another value
@@ -30,7 +30,7 @@ set foo = 2
 
 Constant variables (defined with `const` keyword) cannot be reassigned using the `set` keyword.
 
-```nbl
+```nbcl
 const foo = 1
 
 # This will throw an error
@@ -39,7 +39,7 @@ set foo   = 2
 
 Augmented assignments are also supported with `set`:
 
-```nbl
+```nbcl
 let foo = 0
 
 # Add five to foo

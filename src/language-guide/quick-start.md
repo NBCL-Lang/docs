@@ -10,7 +10,7 @@ How to traverse the Rust structure will be showcased in the [Embedding Guide](..
 
 NBCL supports both single-line comments and multi-line comments. Single-line comments are defined by `#` key. And multi-line comments and defined in between the keys `#-` and `-#`.
 
-```nbl
+```nbcl
 # Single-line comment
 
 #-
@@ -25,7 +25,7 @@ NBCL supports both single-line comments and multi-line comments. Single-line com
 Here is a simple "Hello, World" example in NBCL. It showcases how both scripting and configuration exist together.
 
 ::: code-group
-```nbl
+```nbcl
 # Print out "Hello, World" in script
 print("Hello, World")
 

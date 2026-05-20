@@ -8,7 +8,7 @@ List of all the functions that is built into Nbcl by default.
 
 Print a value.
 
-```nbl
+```nbcl
 print("Hello, World")
 ```
 
@@ -18,7 +18,7 @@ print("Hello, World")
 
 Convert something to a string.
 
-```nbl
+```nbcl
 to_string(5)
 ```
 
@@ -28,7 +28,7 @@ to_string(5)
 
 Convert something to an integer.
 
-```nbl
+```nbcl
 as_int("10")
 ```
 
@@ -38,7 +38,7 @@ as_int("10")
 
 Convert something to a float.
 
-```nbl
+```nbcl
 as_float("3")
 ```
 
@@ -48,7 +48,7 @@ as_float("3")
 
 Get the type of a data.
 
-```nbl
+```nbcl
 type_of("Hello, World")
 ```
 
@@ -58,7 +58,7 @@ type_of("Hello, World")
 
 Get the length of a data.
 
-```nbl
+```nbcl
 len("Hello")
 ```
 
@@ -68,7 +68,7 @@ len("Hello")
 
 Check if the data contains something.
 
-```nbl
+```nbcl
 contains("Hello, World", "World")
 ```
 
@@ -78,8 +78,8 @@ contains("Hello, World", "World")
 
 Push a data into a list.
 
-```nbl
-local list = [1, 2, 3, 4]
+```nbcl
+let list = [1, 2, 3, 4]
 push(list, 5)
 ```
 
@@ -89,8 +89,8 @@ push(list, 5)
 
 Removes and returns the last element from a list.
 
-```nbl
-local list = [1, 2, 3]
+```nbcl
+let list = [1, 2, 3]
 pop(list) # removes and returns 3
 ```
 
@@ -100,8 +100,8 @@ pop(list) # removes and returns 3
 
 Returns all the keys from a map.
 
-```nbl
-local map = { foo = 1, baz = 2 }
+```nbcl
+let map = { foo = 1, baz = 2 }
 keys(map) # returns ["foo", "baz"]
 ```
 
@@ -111,7 +111,7 @@ keys(map) # returns ["foo", "baz"]
 
 Returns all the values from a map.
 
-```nbl
-local map = { foo = 1, baz = 2 }
+```nbcl
+let map = { foo = 1, baz = 2 }
 values(map) # returns [1, 2]
 ```
