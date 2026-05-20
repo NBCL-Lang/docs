@@ -13,7 +13,7 @@ Creates a new Nbcl Engine.
 **Example:**
 
 ```rust
-use crate::NbclEngine;
+use nbcl::NbclEngine;
 
 let engine = NbclEngine::new();
 ```
@@ -30,7 +30,7 @@ Parse the contents of a file into source AST.
 
 ```rust
 use std::path::PathBuf;
-use crate::NbclEngine;
+use nbcl::NbclEngine;
 
 let engine = NbclEngine::new();
 let source_ast = engine.parse(PathBuf::from("./example.nbl")).unwrap();
@@ -47,7 +47,7 @@ Parse a source into source AST.
 **Example:**
 
 ```rust
-use crate::NbclEngine;
+use nbcl::NbclEngine;
 
 let engine = NbclEngine::new();
 let source = "print('Hello, World')";
@@ -65,7 +65,7 @@ Evaluates a source ast, produce side-effects, and return resolved configuration.
 **Example:**
 
 ```rust
-use crate::NbclEngine;
+use nbcl::NbclEngine;
 
 let engine = NbclEngine::new();
 let source = "print('Hello, World')";
@@ -84,7 +84,7 @@ Evaluates a source ast, produce side-effects, and return resolved configuration 
 **Example:**
 
 ```rust
-use crate::NbclEngine;
+use nbcl::NbclEngine;
 
 let engine = NbclEngine::new();
 let source = "print('Hello, World')";
@@ -103,7 +103,7 @@ Parse and evaluate a source string, produce side-effects, and return resolved co
 **Example:**
 
 ```rust
-use crate::NbclEngine;
+use nbcl::NbclEngine;
 
 let engine = NbclEngine::new();
 let source = "print('Hello, World')";

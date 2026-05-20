@@ -41,7 +41,7 @@ Register a custom node into the engine.
 **Example:**
 
 ```rust
-use crate::{NbclEngine, NativeNodeSchema};
+use nbcl::{NbclEngine, NativeNodeSchema};
 
 let mut engine = NbclEngine::new();
 engine.register_node(NativeNodeSchema {
@@ -132,7 +132,7 @@ Set a global variable that can be accessed in Nbcl.
 **Example:**
 
 ```rust
-use crate::{NbclEngine, Value};
+use nbcl::{NbclEngine, Value};
 
 let mut engine = NbclEngine::new();
 engine.set_global("PI", Value::Float(std::f64::consts::PI))

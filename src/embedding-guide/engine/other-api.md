@@ -13,7 +13,7 @@ Set a maximum recursion depth. Default is 5.
 **Example:**
 
 ```rust
-use crate::NbclEngine;
+use nbcl::NbclEngine;
 
 let engine = NbclEngine::new();
 engine.set_max_depth(10);
@@ -30,7 +30,7 @@ Call a normal/lambda function available in the provided context.
 **Example:**
 
 ```rust
-use crate::{NbclEngine, Value};
+use nbcl::{NbclEngine, Value};
 
 let engine = NbclEngine::new();
 let source = "fn test(a) { print(a) }";
