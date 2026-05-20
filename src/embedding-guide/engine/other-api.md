@@ -18,3 +18,29 @@ use crate::NbclEngine;
 let engine = NbclEngine::new();
 engine.set_max_depth(10);
 ```
+
+## NbclEngine.call_function
+
+```rust
+pub fn call_function(&self, name: &str, args: Vec<Value>, ctx: Context) -> Result<Value>;
+```
+
+Call a normal/lambda function available in the provided context.
+
+**Example:**
+
+```rust
+use crate::{NbclEngine, Value};
+
+let engine = NbclEngine::new();
+let source = "fn test(a) { print(a) }";
+let source_ast = engine.parse_str(&source).unwrap();
+let config_and_ctx = engine.evaluate_ast_for_ctx(source_ast).unwrap();
+
+// The result is a 'Value'.
+let res = engine.call_function(
+    "test", 
+    vec![Value::Str("Hello, World".into())], 
+    config_and_ctx.1
+);
+```

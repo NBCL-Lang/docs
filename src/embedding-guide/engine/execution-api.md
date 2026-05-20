@@ -73,6 +73,25 @@ let source_ast = engine.parse_str(&source).unwrap();
 let res_config = engine.evaluate_ast(source_ast).unwrap();
 ```
 
+## NbclEngine.evaluate_ast_for_ctx
+
+```rust
+pub fn evaluate_ast_for_ctx(&self, file: File) -> Result<(ResolvedTree, Context)>;
+```
+
+Evaluates a source ast, produce side-effects, and return resolved configuration **and** evaluation context. The evaluation context is useful for [other-api/call_function](other-api/#nbclengine-call-function).
+
+**Example:**
+
+```rust
+use crate::NbclEngine;
+
+let engine = NbclEngine::new();
+let source = "print('Hello, World')";
+let source_ast = engine.parse_str(&source).unwrap();
+let config_and_ctx = engine.evaluate_ast_for_ctx(source_ast).unwrap();
+```
+
 ## NbclEngine.evaluate
 
 ```rust
@@ -90,4 +109,3 @@ let engine = NbclEngine::new();
 let source = "print('Hello, World')";
 let res_config = engine.evaluate(source).unwrap();
 ```
-
