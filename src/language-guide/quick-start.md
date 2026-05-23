@@ -3,7 +3,7 @@
 ::: info
 The resolved configuration in the outputs of the examples shown is in JSON instead of the Rust structure as that is more convenient. But the given JSON's are accurate to the JSON serialized form of the Rust structure.
 
-How to traverse the Rust structure will be showcased in the [Embedding Guide](../embedding-guide/add-dependency.md) section.
+If you are a developer looking to traverse the Rust structure, check the [Embedding Guide](../embedding-guide/add-dependency.md) section out.
 :::
 
 ## Comments
@@ -52,4 +52,4 @@ Object {
 
 The `Object` in this example is called a "**Node**" or a "**Component**". A node can contain properties and children. By default, NBCL only comes with one node built-in, that being the `Object`, which is a very loose node that can take in **any** property, **any** number of children, and **allows** id to be both defined and not defined.
 
-For the language to work well, you need to register your own nodes. The `Object` is a very generalized node that is very easy to cause confusion because of how loose it is. We'll learn how to register new nodes later, but **keep this in mind** for now.
+For the language to work well in an embedded scenario, the developer need to register their own nodes. The `Object` is a very generalized node that is very easy to cause confusion because of how loose it is. However, if you are using this guide to understand how to use the language in a tool that it is embedded in, then you don't have to worry about the `Object` node. As long as that tool has custom nodes registered in of course.
