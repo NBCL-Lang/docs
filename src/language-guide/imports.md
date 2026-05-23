@@ -3,7 +3,7 @@
 In NBCL, you can import modules and libraries.
 
 ::: info
-A module is nothing but another `.nbl` file. Its just a fancy way to say it.
+A module is nothing but another `.nbcl` file. Its just a fancy way to say it.
 :::
 
 ## Importing Modules
@@ -31,7 +31,31 @@ And you want to import the `button.nbl` module, then you need to use the followi
 import "ui/button.nbl" as button
 ```
 
-However, this only imports the functions and the variables defined in the module. Not the components. Since components cannot be accessed under a namespace, you would need to import them like this:
+This imports all the **functions** and the **variables** defined at the top-level of the module. Do note that components are **not** imported under the `button` variable.
+
+:::details What is a top-level?
+The top-level in a language is the first scope. Basically, whatever is defined at the outermost context is a top-level statement in the sense that a `{}` creates a new level (i.e scope).
+
+```nbcl
+# is at top-level
+fn example() {
+  # {} created a new level.
+  # So this is one level deep.
+}
+
+# is at top-level
+fn example2() {
+  # not top-level
+  let one_level_in = 5
+}
+
+# is at top level
+const a = "something"
+let b = "something"
+```
+:::
+
+Since components cannot be accessed or imported under a variable, you would need to import them like this:
 
 ```nbcl
 # Functions and Varibles go under 'button'
