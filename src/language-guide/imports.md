@@ -13,22 +13,22 @@ The syntax for importing a modules is the `import` keyword, followed by the rela
 **Here is an example:**
 
 ```nbcl
-import "example.nbl" as example
+import "example.nbcl" as example
 ```
 
 If your directory looks something like this:
 
 ```sh
 .
-├─ main.nbl
+├─ main.nbcl
 └─ ui/
-   └─ button.nbl
+   └─ button.nbcl
 ```
 
-And you want to import the `button.nbl` module, then you need to use the following code:
+And you want to import the `button.nbcl` module, then you need to use the following code:
 
 ```nbcl
-import "ui/button.nbl" as button
+import "ui/button.nbcl" as button
 ```
 
 This imports all the **functions** and the **variables** defined at the top-level of the module. Do note that components are **not** imported under the `button` variable.
@@ -60,14 +60,14 @@ Since components cannot be accessed or imported under a variable, you would need
 ```nbcl
 # Functions and Varibles go under 'button'
 # 'StyledButton' component is then included in.
-import "ui/button.nbl" as button { StyledButton }
+import "ui/button.nbcl" as button { StyledButton }
 ```
 
 To import all the components in, use the `*` wildcard.
 
 ```nbcl
 # All the components in button is included
-import "ui/button.nbl" as button { * }
+import "ui/button.nbcl" as button { * }
 ```
 
 ## Importing Libraries
@@ -87,7 +87,7 @@ import std.math
 The imported items can be used like this: 
 
 ```nbcl
-import "my_cool_math.nbl" as cool_math
+import "my_cool_math.nbcl" as cool_math
 import std.math
 
 # Functions can be accessed like this

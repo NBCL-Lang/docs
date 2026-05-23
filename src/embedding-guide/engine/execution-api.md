@@ -33,7 +33,7 @@ use std::path::PathBuf;
 use nbcl::NbclEngine;
 
 let engine = NbclEngine::new();
-let source_ast = engine.parse(PathBuf::from("./example.nbl")).unwrap();
+let source_ast = engine.parse(PathBuf::from("./example.nbcl")).unwrap();
 ```
 
 ## NbclEngine.parse_str
