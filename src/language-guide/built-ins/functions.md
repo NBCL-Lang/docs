@@ -19,7 +19,8 @@ print("Hello, World")
 Convert something to a string.
 
 ```nbcl
-to_string(5)
+5.to_string()
+[1, 2, 3].to_string()
 ```
 
 ## `as_int`
@@ -29,7 +30,8 @@ to_string(5)
 Convert something to an integer.
 
 ```nbcl
-as_int("10")
+"10".as_int()
+10.5.as_int()
 ```
 
 ## `as_float`
@@ -39,7 +41,8 @@ as_int("10")
 Convert something to a float.
 
 ```nbcl
-as_float("3")
+"3".as_float()
+3.as_float()
 ```
 
 ## `type_of`
@@ -50,6 +53,8 @@ Get the type of a data.
 
 ```nbcl
 type_of("Hello, World")
+type_of([])
+type_of({})
 ```
 
 ## `len`
@@ -59,7 +64,9 @@ type_of("Hello, World")
 Get the length of a data.
 
 ```nbcl
-len("Hello")
+"Hello".len()
+[2, 3, 4].len()
+{ key = "value" }.len()
 ```
 
 ## `contains`
@@ -69,7 +76,8 @@ len("Hello")
 Check if the data contains something.
 
 ```nbcl
-contains("Hello, World", "World")
+"Hello, World".contains("World")
+["Good", "Bad", "Bye", "Hello"].contains("Hello")
 ```
 
 ## `push`
@@ -80,7 +88,7 @@ Push a data into a list.
 
 ```nbcl
 let list = [1, 2, 3, 4]
-push(list, 5)
+list.push(5)
 ```
 
 ## `pop`
@@ -91,7 +99,7 @@ Removes and returns the last element from a list.
 
 ```nbcl
 let list = [1, 2, 3]
-pop(list) # removes and returns 3
+list.pop() # removes and returns 3
 ```
 
 ## `keys`
@@ -102,7 +110,7 @@ Returns all the keys from a map.
 
 ```nbcl
 let map = { foo = 1, baz = 2 }
-keys(map) # returns ["foo", "baz"]
+map.keys() # returns ["foo", "baz"]
 ```
 
 ## `values`
@@ -113,5 +121,5 @@ Returns all the values from a map.
 
 ```nbcl
 let map = { foo = 1, baz = 2 }
-values(map) # returns [1, 2]
+map.values() # returns [1, 2]
 ```
