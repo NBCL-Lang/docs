@@ -74,6 +74,52 @@
             "patterns": [
                 {
                     "name": "string.quoted.double.nbcl",
+                    "begin": "f\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "match": "\\$\\{([a-z_][a-zA-Z0-9_]*)\\}",
+                            "captures": {
+                                "0": { "name": "punctuation.definition.template-expression.nbcl" },
+                                "1": { "name": "variable.other.nbcl" }
+                            }
+                        },
+                        {
+                            "name": "constant.character.escape.nbcl",
+                            "match": "\\\\([ntr\\\\\"'u]|u[0-9a-fA-F]{4})"
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.nbcl",
+                    "begin": "f'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "match": "\\$\\{([a-z_][a-zA-Z0-9_]*)\\}",
+                            "captures": {
+                                "0": { "name": "punctuation.definition.template-expression.nbcl" },
+                                "1": { "name": "variable.other.nbcl" }
+                            }
+                        },
+                        {
+                            "name": "constant.character.escape.nbcl",
+                            "match": "\\\\([ntr\\\\\"'u]|u[0-9a-fA-F]{4})"
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.double.nbcl",
+                    "begin": "r\"",
+                    "end": "\""
+                },
+                {
+                    "name": "string.quoted.single.nbcl",
+                    "begin": "r'",
+                    "end": "'"
+                },
+                {
+                    "name": "string.quoted.double.nbcl",
                     "begin": "\"",
                     "end": "\"",
                     "patterns": [
