@@ -49,6 +49,7 @@ export default defineConfig({
           { text: 'Nodes', link: '/language-guide/nodes' },
           { text: 'Variables', link: '/language-guide/variables' },
           { text: 'Functions', link: '/language-guide/functions' },
+          { text: 'Data Types', link: '/language-guide/data-types' },
           { text: 'Imports', link: '/language-guide/imports' },
           { text: 'Conditionals', link: '/language-guide/conditionals' },
           { text: 'Loops', link: '/language-guide/loops' },
