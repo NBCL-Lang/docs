@@ -46,13 +46,25 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Quick Start', link: '/language-guide/quick-start' },
-          { text: 'Nodes', link: '/language-guide/nodes' },
-          { text: 'Variables', link: '/language-guide/variables' },
-          { text: 'Functions', link: '/language-guide/functions' },
-          { text: 'Data Types', link: '/language-guide/data-types' },
-          { text: 'Imports', link: '/language-guide/imports' },
-          { text: 'Conditionals', link: '/language-guide/conditionals' },
-          { text: 'Loops', link: '/language-guide/loops' },
+          {
+            text: 'Basics',
+            collapsed: true,
+            items: [
+              { text: 'Nodes', link: '/language-guide/nodes' },
+              { text: 'Variables', link: '/language-guide/variables' },
+              { text: 'Functions', link: '/language-guide/functions' },
+              { text: 'Data Types', link: '/language-guide/data-types' },
+            ]
+          },
+          {
+            text: 'Continuation',
+            collapsed: true,
+            items: [
+              { text: 'Imports', link: '/language-guide/imports' },
+              { text: 'Conditionals', link: '/language-guide/conditionals' },
+              { text: 'Loops', link: '/language-guide/loops' },
+            ],
+          },
           {
             text: 'Built-ins',
             collapsed: true,
@@ -62,7 +74,8 @@ export default defineConfig({
               { text: 'Functions', link: '/language-guide/built-ins/functions' },
               { text: 'Components', link: '/language-guide/built-ins/components' }
             ],
-          }
+          },
+          { text: 'Quirks', link: '/language-guide/quirks' },
         ],
       },
       {
