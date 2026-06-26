@@ -1,8 +1,27 @@
 # Built-in Functions
 
-List of all the functions that is built into Nbcl by default.
+List of all the functions that are built into Nbcl by default.
 
-## `print`
+::: warning
+Nbcl uses Value Semantics [[1]](../quirks). If a function is of a type that mutates a value, make sure to assign its
+result back to the original variable.
+
+```nbcl 
+let mystr = "HELLO"
+
+# How *not* to do
+mystr.to_lowercase()
+print(mystr) # HELLO
+
+# How to do
+set mystr = mystr.to_lowercase()
+print(mystr) # hello
+```
+:::
+
+## Standalone
+
+### `print`
 
 > print(Any) -> Null
 
@@ -12,40 +31,7 @@ Print a value.
 print("Hello, World")
 ```
 
-## `to_string`
-
-> to_string(Any) -> Str
-
-Convert something to a string.
-
-```nbcl
-5.to_string()
-[1, 2, 3].to_string()
-```
-
-## `as_int`
-
-> as_int(Any) -> Int
-
-Convert something to an integer.
-
-```nbcl
-"10".as_int()
-10.5.as_int()
-```
-
-## `as_float`
-
-> as_float(Any) -> Float
-
-Convert something to a float.
-
-```nbcl
-"3".as_float()
-3.as_float()
-```
-
-## `type_of`
+### `type_of`
 
 > type_of(Any) -> Str
 
@@ -57,9 +43,44 @@ type_of([])
 type_of({})
 ```
 
-## `len`
+## Universal (Any)
 
-> `len(Any) -> Int`
+### `to_string`
+
+> to_string(Any) -> Str
+
+Convert something to a string.
+
+```nbcl
+5.to_string()
+[1, 2, 3].to_string()
+```
+
+### `as_int`
+
+> as_int(Any) -> Int
+
+Convert something to an integer.
+
+```nbcl
+"10".as_int()
+10.5.as_int()
+```
+
+### `as_float`
+
+> as_float(Any) -> Float
+
+Convert something to a float.
+
+```nbcl
+"3".as_float()
+3.as_float()
+```
+
+### `len`
+
+> len(Any) -> Int
 
 Get the length of a data.
 
@@ -69,9 +90,76 @@ Get the length of a data.
 { key = "value" }.len()
 ```
 
-## `contains`
+## String
 
-> `contains(List/Str, Any) -> Bool`
+### `to_lowercase`
+
+> to_lowercase(Str) -> Str
+
+Convert a string to lowercase.
+
+```nbcl
+"HELLO".to_lowercase()
+```
+
+### `to_uppercase`
+
+> to_uppercase(Str) -> Str
+
+Convert a string to uppercase.
+
+```nbcl
+"hello".to_uppercase()
+```
+
+### `trim`
+
+> trim(Str) -> Str
+
+Remove leading and trailing whitespace from a string.
+
+```nbcl
+"  hello  ".trim() # output: "hello"
+```
+
+### `trim_start`
+
+> trim_start(Str) -> Str
+
+Remove leading whitespace from a string.
+
+```nbcl
+"  hello  ".trim_start() # output: "hello  "
+```
+
+### `trim_end`
+
+> trim_end(Str) -> Str
+
+Remove trailing whitespace from a string.
+
+```nbcl
+"  hello  ".trim_end() # output: "  hello"
+```
+
+### `split`
+
+> split(Str, Str/Null) -> List
+
+Split a string by a given pattern or by whitespace if `Null` is passed.
+
+```nbcl
+"a,b,c".split(",")
+
+"hello world".split(null)
+"hello world".split() # equal to (null)
+```
+
+## String & List
+
+### `contains`
+
+> contains(List/Str, Any) -> Bool
 
 Check if the data contains something.
 
@@ -80,7 +168,9 @@ Check if the data contains something.
 ["Good", "Bad", "Bye", "Hello"].contains("Hello")
 ```
 
-## `push`
+## List
+
+### `push`
 
 > push(List, Any) -> List
 
@@ -91,7 +181,7 @@ let list = [1, 2, 3, 4]
 set list = list.push(5)
 ```
 
-## `pop`
+### `pop`
 
 > pop(List) -> Any
 
@@ -102,7 +192,9 @@ let list = [1, 2, 3]
 set list = list.pop() # removes and returns 3
 ```
 
-## `keys`
+## Map
+
+### `keys`
 
 > keys(Map) -> List
 
@@ -113,7 +205,7 @@ let map = { foo = 1, baz = 2 }
 map.keys() # returns ["foo", "baz"]
 ```
 
-## `values`
+### `values`
 
 > values(Map) -> List
 
