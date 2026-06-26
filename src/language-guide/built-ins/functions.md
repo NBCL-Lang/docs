@@ -88,7 +88,7 @@ Push a data into a list.
 
 ```nbcl
 let list = [1, 2, 3, 4]
-list.push(5)
+set list = list.push(5)
 ```
 
 ## `pop`
@@ -99,7 +99,7 @@ Removes and returns the last element from a list.
 
 ```nbcl
 let list = [1, 2, 3]
-list.pop() # removes and returns 3
+set list = list.pop() # removes and returns 3
 ```
 
 ## `keys`
