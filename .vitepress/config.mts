@@ -70,7 +70,15 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Overview', link: '/language-guide/built-ins/overview' },
-              { text: 'Libraries', link: '/language-guide/built-ins/libraries' },
+              {
+                  text: 'Libraries',
+                  collapsed: true,
+                  link: '/language-guide/built-ins/libraries',
+                  items: [
+                      { text: 'Math', link: '/language-guide/built-ins/libraries/math' },
+                      { text: 'Time', link: '/language-guide/built-ins/libraries/time' },
+                  ],
+              },
               { text: 'Functions', link: '/language-guide/built-ins/functions' },
               { text: 'Components', link: '/language-guide/built-ins/components' }
             ],
