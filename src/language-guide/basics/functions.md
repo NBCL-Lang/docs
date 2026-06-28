@@ -1,5 +1,7 @@
 # Functions
 
+Nbcl functions are heavily inspired by rust functions and they mostly work the same way.
+
 ## Definition
 
 Defining functions in NBCl is pretty similar to other languages. Here is an example:

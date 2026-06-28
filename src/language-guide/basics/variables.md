@@ -1,5 +1,8 @@
 # Variables
 
+Variables are like containers that hold a [data type](./data-types). They are necessary to 
+store and share a data around.
+
 ## Defnitions
 
 In NBCL, there are two ways a variable can be defined. Eeither using the `let` keyword or the `const` keyword.

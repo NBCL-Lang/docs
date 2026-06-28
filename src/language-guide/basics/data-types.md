@@ -1,5 +1,7 @@
 # Data Types
 
+Data types are one of the building blocks of nbcl. This page will cover all of them and their usage examples.
+
 ## Strings
 
 There are three types of strings in nbcl: **regular string, raw string, formatted string**.

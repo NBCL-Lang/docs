@@ -1,5 +1,7 @@
 # Advanced 
 
+Advanced features of nbcl that mostly won't be needed but exists for convenience.
+
 ## Spreading
 
 You can spread either a List or a Map into another List or Map using the spread operator (`...`).
