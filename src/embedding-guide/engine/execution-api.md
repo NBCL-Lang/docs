@@ -92,6 +92,29 @@ let source_ast = engine.parse_str(&source).unwrap();
 let config_and_ctx = engine.evaluate_ast_for_ctx(source_ast).unwrap();
 ```
 
+## NbclEngine.eval_ast_with_eval_ctx
+
+```rust
+pub fn eval_ast_with_eval_ctx(&self, file: File, ctx: &mut EvalContext) -> Result<ResolvedTree>
+```
+
+Evaluate with the provided evaluate context, mutating it on the process. [`EvalContext`] not similar to [`Context`],
+it contains way more information about the evaluation including user defined functions and variables.
+
+**Example:**
+
+```rust 
+use nbcl::{NbclEngine, context::EvalContext}
+
+let engine = NbclEngine::new();
+let mut ectx = EvalContext::from(&engine);
+
+let source = "print('Hello, World')";
+let source_ast = engine.parse_str(&source).unwrap();
+
+let tree = engine.eval_ast_with_eval_ctx(source_ast, &mut ectx).unwrap();
+```
+
 ## NbclEngine.evaluate
 
 ```rust
