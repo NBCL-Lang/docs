@@ -54,7 +54,7 @@ But this feature makes it so that this also works:
 "Jhon".is("20")
 ```
 
-This feature is **not** exclusive to user defined functions only. The same behavior is present with [built-in functions](built-ins/functions.md) too. Here is an example:
+This feature is **not** exclusive to user defined functions only. The same behavior is present with [built-in functions](../built-ins/functions.md) too. Here is an example:
 
 ```nbcl
 "Hello, World".print()
