@@ -13,7 +13,7 @@ There are three types of strings in nbcl: **regular string, raw string, formatte
 print("Hello! \n")
 ```
 
-```output
+```txt [output]
 "Hello!
 "
 ```
@@ -27,7 +27,7 @@ print("Hello! \n")
 print(r"Hello! \n")
 ```
 
-```output 
+```txt [output]
 "Hello! \n"
 ```
 :::
@@ -41,7 +41,7 @@ const val = "World"
 print(f"Hello, ${val}!")
 ```
 
-```output 
+```txt [output]
 "Hello, World!"
 ```
 :::
