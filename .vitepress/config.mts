@@ -50,19 +50,20 @@ export default defineConfig({
             text: 'Basics',
             collapsed: true,
             items: [
-              { text: 'Nodes', link: '/language-guide/nodes' },
-              { text: 'Variables', link: '/language-guide/variables' },
-              { text: 'Functions', link: '/language-guide/functions' },
-              { text: 'Data Types', link: '/language-guide/data-types' },
+              { text: 'Nodes', link: '/language-guide/basics/nodes' },
+              { text: 'Variables', link: '/language-guide/basics/variables' },
+              { text: 'Functions', link: '/language-guide/basics/functions' },
+              { text: 'Data Types', link: '/language-guide/basics/data-types' },
             ]
           },
           {
             text: 'Continuation',
             collapsed: true,
             items: [
-              { text: 'Imports', link: '/language-guide/imports' },
-              { text: 'Conditionals', link: '/language-guide/conditionals' },
-              { text: 'Loops', link: '/language-guide/loops' },
+              { text: 'Imports', link: '/language-guide/continuation/imports' },
+              { text: 'Conditionals', link: '/language-guide/continuation/conditionals' },
+              { text: 'Loops', link: '/language-guide/continuation/loops' },
+              { text: 'Advanced', link: '/language-guide/continuation/advanced' },
             ],
           },
           {
