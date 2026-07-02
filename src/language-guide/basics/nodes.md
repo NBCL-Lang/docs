@@ -126,7 +126,6 @@ table th:first-child {
 | ----- | ---------- |
 | `(any: props)` | Allows any properties to be passed and puts all the properties in the variable named "props". |
 | `(address, port)` | Only accepts the properties: "address", and "port". Both are required. |
-| `(address, port: Int)` | Only accepts the properties: "address", and "port". Both are required and "port" has to be an integer. |
 | `(address, port?)` | Only accepts the properties: "address", and "port". But, port is optional. |
 
 That is how you setup the signature of your node. Now let's move on to the properties that makes the node loose/strict.
