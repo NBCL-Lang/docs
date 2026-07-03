@@ -17,6 +17,8 @@ Documentaiton on how to use/embed the language.
 
 ## Code Editor Extensions
 
-- [VSCode Syntax Highlighting](https://github.com/NBCL-Lang/nbcl-highlighting-vscode)
+- [VSCode Syntax Highlighting](https://github.com/NBCL-Lang/vscode-nbcl)
+- [Vim/Neovim Syntax Highlighting](https://github.com/NBCL-Lang/vim-nbcl)
+- [Helix Syntax Highlighting](https://github.com/NBCL-Lang/helix-nbcl)
 
-Tooling for better development experience.
+Tooling for better development experience. [See Nbcl Tree Sitter](https://github.com/NBCL-Lang/tree-sitter-nbcl)
